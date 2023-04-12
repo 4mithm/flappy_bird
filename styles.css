@@ -1,0 +1,50 @@
+.title {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	inset: 0;
+	flex-direction: column;
+	z-index: 100;
+}
+.hide {
+	display: none;
+}
+body {
+	overflow: hidden;
+}
+.bird {
+	background-color: indigo;
+	border-radius: 50%;
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	left: 100px;
+	--bird-top: -1000;
+	top: calc(var(--bird-top) * 1px);
+}
+.pipe {
+	--hole:0;
+	--top-height: 600; 
+      --pipe-left:-100;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 40px;
+	height: 100%;
+      left:calc(var(--pipe-left) * 1px);
+}
+.segment {
+	position: absolute;
+	width: 100%;
+	background-color: grey;
+}
+.top {
+	top: 0;
+	bottom: calc(var(--top-height) * 1px);
+}
+
+.bottom {
+	bottom: 0px;
+	top: calc(100vh - (var(--top-height) * 1px) + calc(var(--hole) * 1px));
+}
